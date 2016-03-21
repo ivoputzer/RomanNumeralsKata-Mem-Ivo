@@ -1,4 +1,6 @@
+Today I did the following Kata with [@marinomeneghel](https://github.com/marinomeneghel), here's the outcome!
 
+---
 
 
 RomanNumerals [![Build Status](https://travis-ci.org/pedrovgs/RomanNumerals-Kata.svg?branch=master)](https://travis-ci.org/pedrovgs/RomanNumerals-Kata)
