@@ -11,7 +11,8 @@ import main.RomanNumerals;
 public class RomanNumeralsTest {
 
 	@Test
-	public void testSimpleRomanNumerals () {
+	public void testSimpleRomanNumerals() {
+		assertEquals("", RomanNumerals.fromDecimal(0));
 		assertEquals("I", RomanNumerals.fromDecimal(1));
 		assertEquals("II", RomanNumerals.fromDecimal(2));
 		assertEquals("III", RomanNumerals.fromDecimal(3));
@@ -24,10 +25,23 @@ public class RomanNumeralsTest {
 	}
 		
 	@Test
-	public void testSmallestPossibileDecimalStep() throws Exception {
-		assertEquals(1, RomanNumerals.smallestPossibleDecimal(1));
-		assertEquals(1, RomanNumerals.smallestPossibleDecimal(3));
-		assertEquals(5, RomanNumerals.smallestPossibleDecimal(7));
+	public void testSmallestPossibileDecimalStep() {
+		assertEquals(0, RomanNumerals.greatestRomanNumberEquivalentFor(0));
+		assertEquals(1, RomanNumerals.greatestRomanNumberEquivalentFor(1));
+		assertEquals(1, RomanNumerals.greatestRomanNumberEquivalentFor(3));
+		assertEquals(5, RomanNumerals.greatestRomanNumberEquivalentFor(7));
 		
+	}
+
+	@Test
+	public void testSucceedingRomanNumerals() {
+		 assertEquals("VI", RomanNumerals.fromDecimal(6));
+		 assertEquals("VIII", RomanNumerals.fromDecimal(8));
+	}
+	
+	
+	public void testPrecedingRomanNumerals() {
+		 assertEquals("IV", RomanNumerals.fromDecimal(4));
+		 assertEquals("IX", RomanNumerals.fromDecimal(10));
 	}
 }
